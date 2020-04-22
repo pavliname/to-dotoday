@@ -12,7 +12,7 @@ app.set('trust proxy', true)
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect(process.env.CONNECTION, {useNewUrlParser:true});
+mongoose.connect(GITHUB_CONNECTION, {useNewUrlParser:true});
 
 const itemsSchema = {
   name: String
