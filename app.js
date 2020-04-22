@@ -12,7 +12,7 @@ app.set('trust proxy', true)
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect(GITHUB_CONNECTION, {useNewUrlParser:true});
+mongoose.connect("mongodb+srv://"+USERNAME+":"+PASSWORD+"@cluster0-lk22i.mongodb.net/todolistDB", {useNewUrlParser:true});
 
 const itemsSchema = {
   name: String
